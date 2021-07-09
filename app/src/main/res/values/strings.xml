@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ASP Tracker</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="signup">signup</string>
+    <string name="login_here">login here</string>
+    <string name="email">email</string>
+
+    <string name="fullname">fullname</string>
+    <string name="string_signup" />
+    <string name="logo">logo</string>
+    <string name="don_t_have_an_account_sign_up">don\'t have an account?sign up</string>
+    <string name="dont_have_an_account_sign_up">dont have an account?sign up</string>
+    <string name="signuphere">Create a new account? sign up here</string>
+    <string name="already_have_an_account_login_here">Already have an account? login here</string>
+</resources>
