@@ -40,6 +40,16 @@ public class SignUp extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progress);
 
+        //setting onclick listener for text view to redirected to login activity
+        textViewLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), LogIn.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         //creating onclick listener for the button
         buttonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,10 +80,10 @@ public class SignUp extends AppCompatActivity {
                             field[3] = "email";
                             //Creating array for data
                             String[] data = new String[4];
-                            data[0] = "fullname";
-                            data[1] = "username";
-                            data[2] = "password";
-                            data[3] = "email";
+                            data[0] = fullname;
+                            data[1] = username;
+                            data[2] = password;
+                            data[3] = email;
                             //From the emulator, 127.0.0.1 refers to the emulator itself - not your local machine. You need to use ip 10.0.2.2, which is bridged to your local machine.
                             PutData putData = new PutData("http://10.0.2.2/LoginRegister/signup.php", "POST", field, data);
                             if (putData.startPut()) {
@@ -103,14 +113,6 @@ public class SignUp extends AppCompatActivity {
                     //creating a toast to display an error message when the one or more fields is empty
                     Toast.makeText(getApplicationContext(),"All fields required", Toast.LENGTH_SHORT).show();
                 }
-                textViewLogin.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(getApplicationContext(), LogIn.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                });
 //end of codes
             }
         });
