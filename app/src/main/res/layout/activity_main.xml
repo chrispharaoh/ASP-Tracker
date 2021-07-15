@@ -2,18 +2,121 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="Welcome Chris!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="match_parent"
+        android:layout_height="167dp"
+        android:contentDescription="@string/applogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/d1dc06537bfe47039474deb324382674" />
+
+    <Button
+        android:id="@+id/configure"
+        android:textSize="20sp"
+        android:background="#01685F"
+        android:textColor="#FAF6F1F1"
+        android:layout_width="412dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="27dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/configurations"
+        app:layout_constraintBottom_toTopOf="@+id/coordinate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/coordinate"
+        android:layout_width="411dp"
+        android:textSize="20sp"
+        android:background="#01685F"
+        android:textColor="#FAF6F1F1"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="21dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/locate_coordinates_on_map"
+        app:layout_constraintBottom_toTopOf="@+id/lockp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/configure" />
+
+    <Button
+        android:id="@+id/lockp"
+        android:layout_width="412dp"
+        android:layout_height="68dp"
+        android:textSize="20sp"
+        android:background="#01685F"
+        android:textColor="#FAF6F1F1"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/lock_phone_remotely"
+        app:layout_constraintBottom_toTopOf="@+id/control"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coordinate" />
+
+    <Button
+        android:id="@+id/control"
+        android:layout_width="410dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:background="#01685F"
+        android:textColor="#FAF6F1F1"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/control_remote_phone"
+        app:layout_constraintBottom_toTopOf="@+id/sign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lockp" />
+
+
+    <TextView
+        android:id="@+id/sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="548dp"
+        android:layout_marginBottom="26dp"
+        android:fontFamily="@font/poppinsbold"
+        android:gravity="center"
+        android:text="@string/help"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/developer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/developer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="580dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/poppinsbold"
+        android:gravity="center"
+        android:text="@string/developers_info"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

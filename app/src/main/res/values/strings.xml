@@ -14,4 +14,12 @@
     <string name="dont_have_an_account_sign_up">dont have an account?sign up</string>
     <string name="signuphere">Create a new account? sign up here</string>
     <string name="already_have_an_account_login_here">Already have an account? login here</string>
+    <string name="configurations">Configurations</string>
+    <string name="locate_coordinates_on_map">Locate coordinates on map</string>
+    <string name="applogo">applogo</string>
+    <string name="lock_phone_remotely">lock phone remotely</string>
+    <string name="control_remote_phone">control remote phone</string>
+    <string name="help">Help?</string>
+    <string name="developers_info">Developers info</string>
+    <string name="sign_up">Sign up</string>
 </resources>
