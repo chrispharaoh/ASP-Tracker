@@ -22,4 +22,23 @@
     <string name="help">Help?</string>
     <string name="developers_info">Developers info</string>
     <string name="sign_up">Sign up</string>
+    <string name="activitylogo">activitylogo</string>
+    <string name="configure_location_settings">Configure location settings</string>
+    <string name="how_do_you_want_your_phone_to_get_gps_and_email_text_it">How do you want your phone to get gps and email/text it?</string>
+    <string name="set_friquency_number_of_hours">Set friquency (number of hours)</string>
+    <string name="select_time_friquency">Select time friquency:</string>
+    <string name="email_coordinates_to">Email coordinates to:</string>
+    <string name="message_coordinates_to">Message coordinates to:</string>
+    <string name="save">Save</string>
+    <string name="phone">Phone</string>
+    <string name="or">OR:</string>
+    <string name="latitude">Latitude</string>
+    <string name="longtude">Longtude</string>
+    <string name="current_location">Current location</string>
+    <string name="gmail">Gmail:</string>
+    <string name="_0_0">0.0</string>
+
+    <string name="_0_00">-0.00</string>
+    <string name="longitude">longitude</string>
+
 </resources>

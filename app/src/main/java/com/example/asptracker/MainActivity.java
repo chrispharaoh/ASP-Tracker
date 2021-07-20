@@ -20,8 +20,9 @@ public class MainActivity extends AppCompatActivity {
         buttonConfig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:12.9778739,77.5904463,17?z=9"));
+                Intent intent = new Intent(getApplicationContext(), MyLocation.class);
                 startActivity(intent);
+
             }
         });
     }

@@ -25,7 +25,7 @@
         tools:targetApi="jelly_bean" />
 
     <TextView
-        android:id="@+id/sign"
+        android:id="@+id/locationHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -111,7 +111,7 @@
         android:layout_height="182dp"
         android:layout_marginStart="1dp"
         android:layout_marginBottom="3dp"
-        app:layout_constraintBottom_toTopOf="@+id/sign"
+        app:layout_constraintBottom_toTopOf="@+id/locationHeader"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
