@@ -3,11 +3,10 @@
     package="com.example.asptracker">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -17,23 +16,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ASPTracker"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MyLocation" android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
-        <activity
-            android:name=".LogIn"
-            android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".LocateCoodinates">
 
         </activity>
         <activity
-            android:name=".SignUp"
-            android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
+            android:name=".MyLocation"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LogIn"
             android:theme="@style/Theme.Design.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignUp"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar">
+
         </activity>
     </application>
 

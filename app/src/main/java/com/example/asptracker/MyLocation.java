@@ -46,13 +46,15 @@ public EditText emailValidate;
 public  EditText phone;
 public EditText thisEmail;
 public EditText thisPhone;
+public  EditText emailField;
+public  EditText phoneField;
 public String phonePattern;
 public String sequency;
 public static final String SHARED_PREFS = "sharedPrefs";
 public static final String SEQUENCE = "text";
 public static final String EMAIL = "email";
 public static final String PHONE = "phone";
-    public static final String SEQUENCY = "sequency";
+public static final String SEQUENCY = "sequency";
 
 
     @Override
@@ -125,6 +127,9 @@ public static final String PHONE = "phone";
                                     editor.putString(EMAIL, thisEmail.getText().toString());
                                     editor.putString(PHONE, thisPhone.getText().toString());
                                     editor.putString(SEQUENCY, sequency);
+                                    editor.apply();
+                                    Toast.makeText(getApplicationContext(), "Data Saved successfully", Toast.LENGTH_SHORT).show();
+
                                 }
                         }
                     }
@@ -132,6 +137,8 @@ public static final String PHONE = "phone";
                 }
             }
         });
+
+        
 //
 //        if (!emailText.getText().toString().trim().matches(emailPattern)) {
 //            Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT).show();
