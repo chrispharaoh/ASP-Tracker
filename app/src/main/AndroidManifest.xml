@@ -16,9 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ASPTracker"
         android:usesCleartextTraffic="true">
-        <activity android:name=".LocateCoodinates">
-
-        </activity>
+        <activity android:name=".Home"></activity>
+        <activity android:name=".LocateCoodinates"></activity>
         <activity
             android:name=".MyLocation"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
@@ -34,11 +33,7 @@
         <activity
             android:name=".SignUp"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/Theme.Design.Light.NoActionBar">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
