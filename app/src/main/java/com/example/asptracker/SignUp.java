@@ -3,6 +3,7 @@ package com.example.asptracker;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -22,6 +23,11 @@ public class SignUp extends AppCompatActivity {
     TextView textViewLogin;
     //object for the progressbar
     ProgressBar progressBar;
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String USERNAME = "username";
+    public static final String PASSWORD = "password";
+    public static final String EMAIL = "email";
+    public static final String FULLNAME = "fullname";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +53,7 @@ public class SignUp extends AppCompatActivity {
                 finish();
             }
         });
+
 
         //creating onclick listener for the button
         buttonSignUp.setOnClickListener(new View.OnClickListener() {

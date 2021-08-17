@@ -21,12 +21,13 @@ public class LogIn extends AppCompatActivity {
     public static final String USERNAME = "email";
     public static final String PASSWORD = "phone";
     //initializing text
+    TextView t1,t2;
     TextInputEditText textInputEditTextUsername,textInputEditTextPassword;
     Button buttonLogIn;
     TextView textViewSignUp;
     //object for the progressbar
     ProgressBar progressBar;
-    private String text1, text2;
+    private String text1, text2,usernamedata,passwordata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,8 @@ public class LogIn extends AppCompatActivity {
         textViewSignUp = findViewById(R.id.signuptext);
         progressBar = findViewById(R.id.progress);
 
-        //   setting onclick listener for text view to redirected to login activity
+
+        //setting onclick listener for text view to redirected to login activity
         textViewSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,18 +54,22 @@ public class LogIn extends AppCompatActivity {
 
         //checking if the user is already have an account in shared preferences
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        text1 = sharedPreferences.getString(USERNAME,null);
+        text1 = sharedPreferences.getString(USERNAME, null);
         text2 = sharedPreferences.getString(PASSWORD, null);
+
+
         if (text1 != null && text2 != null) {
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
             finish();
-        } else {
-            //creating onclick listener for the button
-            if (text1 == null && text2 == null){
+        } else{
+
+            if (text1 == null && text2 == null) {
                 buttonLogIn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
+
                         //variables for getting real input data
                         String username, password;
                         //capturing text
@@ -74,6 +80,10 @@ public class LogIn extends AppCompatActivity {
 
                         //checking whether there is an error in text fields before submiting
                         if (!username.equals("") && !password.equals("")) {
+
+                            //logging the user with shared preferences
+                            usernamedata = sharedPreferences.getString(USERNAME, "");
+                            passwordata = sharedPreferences.getString(PASSWORD, "");
 
                             //Start ProgressBar first (Set visibility VISIBLE)\
 
@@ -127,6 +137,7 @@ public class LogIn extends AppCompatActivity {
                             });
                         } else {
                             //creating a toast to display an error message when the one or more fields is empty
+                            textInputEditTextUsername.setError("Username cannot be empty");
                             Toast.makeText(getApplicationContext(), "All fields required", Toast.LENGTH_SHORT).show();
                         }
 //end of codes
@@ -134,7 +145,7 @@ public class LogIn extends AppCompatActivity {
 
                 });
             }
-         }
+    }
 
     }
 }
