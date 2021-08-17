@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView buttonConfig, buttonCoordinates, buttonLock, buttonControl;
+        TextView buttonConfig, buttonCoordinates,buttonLock ;
+        TextView control;
         ImageView image1, image2, image3, image4;
 
         image1 = findViewById(R.id.imageView5);
@@ -41,6 +42,59 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onHover(View v, MotionEvent event) {
                 return false;
+            }
+        });
+
+        buttonLock = findViewById(R.id.lockp);
+        image2 = findViewById(R.id.imageView7);
+        buttonLock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RemoteLock.class);
+                startActivity(intent);
+            }
+        });
+
+        image2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RemoteLock.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonCoordinates = findViewById(R.id.location1);
+        image3 = findViewById(R.id.imageView4);
+
+        buttonCoordinates.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Location.class);
+                startActivity(intent);
+            }
+        });
+
+        image3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Location.class);
+                startActivity(intent);
+            }
+        });
+        image4 = findViewById(R.id.imageView8);
+        control = findViewById(R.id.control);
+        control.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RemoteControl.class);
+                startActivity(intent);
+            }
+        });
+        image4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RemoteControl.class);
+                startActivity(intent);
             }
         });
     }

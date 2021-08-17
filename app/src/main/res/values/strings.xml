@@ -43,5 +43,12 @@
     <string name="location">Location</string>
     <string name="remote_control">Remote Control</string>
     <string name="remote_lock">Remote Lock</string>
+    <string name="title_activity_location">Map</string>
+    <string name="recovery_messaage_optional">Recovery Messaage (Optional)</string>
+    <string name="leave_anyone_who_finds_your_device_a_message_or_phone_number_where_you_can_be_reached">Leave anyone who finds your device a message or phone number where you can be reached</string>
+    <string name="message">Message</string>
+    <string name="phone_number_optional">Phone number (Optional)</string>
+    <string name="name">Name</string>
+    <string name="to_get_the_location_enter_the_coordinates_and_click_search_button">To get the location enter the coordinates and click search button</string>
 
 </resources>
